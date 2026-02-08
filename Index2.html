@@ -1,0 +1,36 @@
+    <h1>Will you be my Valentine? 💕</h1>
+
+    <div class="buttons">
+      <button id="yes" onclick="yesClicked()">Yes 😊</button>
+      <button id="no" onmouseover="moveNo()">No 😅</button>
+    </div>
+  </div>
+
+  <script>
+    function yesClicked() {
+      document.body.innerHTML = `
+        <div style="
+          display:flex;
+          justify-content:center;
+          align-items:center;
+          height:100vh;
+          font-family:Arial;
+          background:#ff9a9e;
+          text-align:center;
+        ">
+          <h1>YAY! 😍💖<br>I LOVVVVEEE YOUUU SOOO MUCCHHH BABIII 😗</h1>
+        </div>
+      `;
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("no");
+      const randX = Math.random() * 170;
+      const randY = Math.random() * 40;
+      noBtn.style.left = randX + "px";
+      noBtn.style.top = randY + "px";
+    }
+  </script>
+
+</body>
+</html>
